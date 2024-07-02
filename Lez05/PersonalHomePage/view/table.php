@@ -1,6 +1,6 @@
 <h2>Elenco CV</h2>
 
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>Nome</th>
         <th>Cognome</th>
@@ -14,5 +14,5 @@
     </tr>
 
 <?php endforeach; ?>   
- 
+
 </table>
