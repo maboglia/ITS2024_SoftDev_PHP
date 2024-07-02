@@ -2,14 +2,19 @@
 
 include 'Studente.php';
 
-$studente1 = new Studente('mauro', 'bogliaccino');
+$studenti = file('studenti.txt');
+$registro = [];//array vuoto
 
+foreach ($studenti as $rigaStudente) {//per ogni riga
 
-$studente1->nome = 'Edo';
-$studente1->cognome = 'Berardengo';
-echo $studente1;
+   $parole = explode(',', $rigaStudente);//spezzo la riga
 
+   $registro[] =  new Studente($parole[0], $parole[1]);//creo oggetto studente e aggiungo ad array
 
+}
 
+foreach ($registro as $studente) {
+    echo '<h1>' . $studente . '</h1>';
+}
 
 ?>
