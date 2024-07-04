@@ -31,6 +31,10 @@ class Studente {
     }
 
 
+    public function serialize(){
+        return get_object_vars($this);
+    }
+
 }
 
 
