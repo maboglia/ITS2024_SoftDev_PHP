@@ -1,5 +1,7 @@
 <?php
-error_reporting(E_ALL);
+ini_set( 'error_reporting', E_ALL );
+ini_set( 'display_errors', true );
+
 $pagina = 'home';
 
 if (isset($_GET['page'])  &&   !empty($_GET['page'])){
@@ -8,7 +10,7 @@ if (isset($_GET['page'])  &&   !empty($_GET['page'])){
 
 switch ($pagina) {
     case 'pagina1':
-        file_get_contents("../app/views/pages/pagina1.php");
+        require("../app/views/pages/pagina1.php");
         echo HOME_PATH_REL."app/views/pages/pagina1.php";
         break;
     
