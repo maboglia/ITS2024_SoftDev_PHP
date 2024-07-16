@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 $host = 'localhost:3307';
 $user = 'ITS_2024';
 $pass = 'bogliaccino';

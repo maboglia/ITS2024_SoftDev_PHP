@@ -1,6 +1,6 @@
 <?php
 
-require_once './config.php';
+require_once './functions.php';
 
 header('Access-Control-Allow-Origin:*');//CORS
 header('Content-Type:application/json');
@@ -9,18 +9,11 @@ header('Access-Control-Allow-Headers:Content-Type, Access-Control-Allow-Headers,
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-
-
 if ($requestMethod == 'GET'){
 
-    $query = 'SELECT * FROM libri';
+    $result = getLibri();
 
-    $eseguiQuery = mysqli_query($conn, $query);
-
-    if (mysqli_num_rows($eseguiQuery) > 0){
-
-        $result = mysqli_fetch_all($eseguiQuery,MYSQLI_ASSOC);
-
+    if (!empty($result)){
         $data = [
             'status' => 200,
             'message' => 'Full list of books',
