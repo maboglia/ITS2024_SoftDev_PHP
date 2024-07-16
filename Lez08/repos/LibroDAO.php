@@ -10,8 +10,9 @@
 
 include_once '../model/Libro.php';
 include_once '../repos/Connessione.php';
+include_once '../repos/LibroDAOInterface.php';
 
-class LibroDAO  {
+class LibroDAO implements LibroDAOInterface  {
 
     private Connessione $connessione;
     private $conn;
