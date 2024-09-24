@@ -1,6 +1,6 @@
 <?php
 
-namespace maboglia\model;
+namespace maboglia\app;
 
 class Prodotto {
     
